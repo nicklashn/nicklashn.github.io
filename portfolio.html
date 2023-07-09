@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Nicklas Høj Nielsen</h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html#resume">Resume</a></li>
+                    <li><a href="/index.html#youtube">YouTube</a></li>
+                    <li><a href="/index.html#contact">Contact</a></li>
+                    <li><a href="">Extras</a></li>
+                </ul>
+            </nav>
+            <div class="dark-mode-switch">
+                <label class="switch">
+                    <input type="checkbox" id="darkMode">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </header>
+        
+    </body>
+    <footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", (event) => {
+                if (!localStorage.getItem('mode')) { // Check if 'mode' setting exists
+                    document.body.classList.add("dark-mode"); // Add dark mode class
+                    localStorage.setItem('mode', 'dark'); // Set 'mode' to 'dark' in localStorage
+                    document.getElementById('darkMode').checked = true; // Set switch to checked
+                }
+        
+                const darkModeSwitch = document.querySelector('#darkMode');
+                darkModeSwitch.addEventListener('change', () => {
+                    document.body.classList.toggle('dark-mode');
+        
+                    // Save the user's preference to localStorage.
+                    if (localStorage.getItem('mode') === 'dark') {
+                        localStorage.setItem('mode', 'light');
+                    } else {
+                        localStorage.setItem('mode', 'dark');
+                    }
+                });
+            });
+        </script>     
+    </footer>
+</html>
