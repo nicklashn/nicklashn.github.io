@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nicklas Høj Nielsen - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+    <header>
+        <h1 class="danish">Nicklas Høj Nielsen</h1>
+        <h1 class="english" style="display: none;">Nicklas Høj Nielsen</h1>
+        <nav>
+            <ul>
+                <li><a href="/CV.html#resume" class="danish">CV</a><a href="#resume" class="english"
+                        style="display: none;">Resume</a></li>
+                <li><a href="/CV.html#youtube" class="danish">YouTube</a><a href="#youtube" class="english"
+                        style="display: none;">YouTube</a></li>
+                <li><a href="/CV.html#contact" class="danish">Kontakt</a><a href="#contact" class="english"
+                        style="display: none;">Contact</a></li>
+                <li><a href="/Portfolio.html" class="danish">Portefølje</a><a href="/Portfolio.html" class="english"
+                        style="display: none;">Portfolio</a></li>
+            </ul>
+        </nav>
+
+        <div class="switch-wrapper">
+            <div class="dark-mode-switch switch">
+                <label>
+                    <input type="checkbox" id="darkMode">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="language-switch switch">
+                <label>
+                    <input type="checkbox" id="languageSwitch">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <div id="portfolio-grid">
+        <!-- This is your normal grid of cases -->
+        <div id="case1" class="case">
+            <!-- Case information goes here -->
+            <h2>Case 1</h2>
+            <p>Brief description of Case 1...</p>
+            <button class="case-btn" onclick="openCase(1)"><i class="material-icons">remove_red_eye</i> Read More</button>
+        </div>
+
+        <div id="case2" class="case">
+            <!-- Case information goes here -->
+            <h2>Case 2</h2>
+            <p>Brief description of Case 2...</p>
+            <button class="case-btn" onclick="openCase(2)"><i class="material-icons">remove_red_eye</i> Read More</button>
+        </div>
+
+        <div id="case3" class="case">
+            <!-- Case information goes here -->
+            <h2>Case 3</h2>
+            <p>Brief description of Case 3...</p>
+            <button class="case-btn" onclick="openCase(3)"><i class="material-icons">remove_red_eye</i> Read More</button>
+        </div>
+
+        <div id="case4" class="case">
+            <!-- Case information goes here -->
+            <h2>Case 4</h2>
+            <p>Brief description of Case 4...</p>
+            <button class="case-btn" onclick="openCase(4)"><i class="material-icons">remove_red_eye</i> Read More</button>
+        </div>
+    </div>
+
+    <!-- The expanded versions of the cases -->
+    <div id="expandedCase1" class="expanded-case" style="display: none;">
+        <!-- More detailed case information goes here -->
+        <h2>Case 1</h2>
+        <ul>
+            <li>
+                Introduktion
+            </li>
+            <li>
+                Udfordringer/Problemer
+            </li>
+            <li>
+                Løsningstilgang
+            </li>
+            <li>
+                Implementationen
+            </li>
+            <li>
+                Resultater
+            </li>
+            <li>
+                Læring
+            </li>
+        </ul>
+        <button class="case-close-btn" onclick="closeCase(1)"><i class="material-icons">close</i> Close</button>
+    </div>
+    <div id="expandedCase2" class="expanded-case" style="display: none;">
+        <!-- More detailed case information goes here -->
+        <h2>Case 2</h2>
+        <ul>
+            <li>
+                Introduktion
+            </li>
+            <li>
+                Udfordringer/Problemer
+            </li>
+            <li>
+                Løsningstilgang
+            </li>
+            <li>
+                Implementationen
+            </li>
+            <li>
+                Resultater
+            </li>
+            <li>
+                Læring
+            </li>
+        </ul>
+        <button class="case-close-btn" onclick="closeCase(2)"><i class="material-icons">close</i> Close</button>
+    </div>
+    <div id="expandedCase3" class="expanded-case" style="display: none;">
+        <!-- More detailed case information goes here -->
+        <h2>Case 3</h2>
+        <ul>
+            <li>
+                Introduktion
+            </li>
+            <li>
+                Udfordringer/Problemer
+            </li>
+            <li>
+                Løsningstilgang
+            </li>
+            <li>
+                Implementationen
+            </li>
+            <li>
+                Resultater
+            </li>
+            <li>
+                Læring
+            </li>
+        </ul>
+        <button class="case-close-btn" onclick="closeCase(3)"><i class="material-icons">close</i> Close</button>
+    </div>
+    <div id="expandedCase4" class="expanded-case" style="display: none;">
+        <!-- More detailed case information goes here -->
+        <h2>Case 4</h2>
+        <ul>
+            <li>
+                Introduktion
+            </li>
+            <li>
+                Udfordringer/Problemer
+            </li>
+            <li>
+                Løsningstilgang
+            </li>
+            <li>
+                Implementationen
+            </li>
+            <li>
+                Resultater
+            </li>
+            <li>
+                Læring
+            </li>
+        </ul>
+        <button class="case-close-btn" onclick="closeCase(4)"><i class="material-icons">close</i> Close</button>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"> </script>

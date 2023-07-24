@@ -3,6 +3,7 @@
 
 <head>
     <title>Nicklas Høj Nielsen - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -28,7 +29,7 @@
         <h2>Resume</h2>
         <!--<p style="text-align:center;">Klik på "+"-knappen ud for hvert element for at få flere detaljer</p>-->
         <h3><i class="fas fa-graduation-cap" style="margin-right:1vw;"></i>Uddannelse</h3>
-        <p><strong>Bachelor i Informations Teknologi,</strong> Aalborg Universitetet, 08/2019 - 07/2022</p>
+        <ul style="padding:0px;"><p><strong>Bachelor i Informations Teknologi,</strong> Aalborg Universitetet, 08/2019 - 07/2022</p></ul>
 
         <h3><i class="fas fa-tasks" style="margin-right:1vw;"></i>Akademiske opgaver</h3>
         <div id="tooltip" class="tooltip">
@@ -98,28 +99,34 @@
                 <span>Udvikling af et Python script til download og behandling af videofiler med tekstindsætning</span>
                 <button class="expand-button">?</button>
                 <ul class="expandable">
-                    <li>Python scriptet blev brugt til at direkte downloade videoer fra Twitch og behandlet dem med tekstindsætning. Tekstindsætning blev brugt senere på video-optagelser - samt brug af openAI-Whisper til at genererer teksten</li>
+                    <li>Python scriptet blev brugt til at direkte downloade videoer fra Twitch og behandlet dem med
+                        tekstindsætning. Tekstindsætning blev brugt senere på video-optagelser - samt brug af
+                        openAI-Whisper til at genererer teksten</li>
                 </ul>
             </li>
             <li class="expandable-item">
                 <span>Arbejdet med Azure og Python scripts til automatisering af processer</span>
                 <button class="expand-button">?</button>
                 <ul class="expandable">
-                    <li>Minimalt arbejde med Azure - blev brugt som database. Python scripts, var i forhold til youtube videoer og ændring af størrelsesforhold.</li>
+                    <li>Minimalt arbejde med Azure - blev brugt som database. Python scripts, var i forhold til youtube
+                        videoer og ændring af størrelsesforhold.</li>
                 </ul>
             </li>
             <li class="expandable-item">
                 <span>Integration med API'er for automatisk upload af videoer til forskellige platforme</span>
                 <button class="expand-button">?</button>
                 <ul class="expandable">
-                    <li>Integration med både youtube, instagram og tiktok for at kunne uploade alle filerne på samme tid og uden at skulle bruge tid på tags</li>
+                    <li>Integration med både youtube, instagram og tiktok for at kunne uploade alle filerne på samme tid
+                        og uden at skulle bruge tid på tags</li>
                 </ul>
             </li>
             <li class="expandable-item">
                 <span>Integration med ChatGPT's API for generering af titler m.m.</span>
                 <button class="expand-button">?</button>
                 <ul class="expandable">
-                    <li>Gjorde brug af ChatGPT til at udarbejde title genering baseret på andre kreatørers titler baseret på mængden af visninger. Den blev også brugt til at generer tags, samt video kreative video ideer.</li>
+                    <li>Gjorde brug af ChatGPT til at udarbejde title genering baseret på andre kreatørers titler
+                        baseret på mængden af visninger. Den blev også brugt til at generer tags, samt video kreative
+                        video ideer.</li>
                 </ul>
             </li>
         </ul>
@@ -191,24 +198,24 @@
         <form action="https://formspree.io/f/myyqyjed" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="John Doe" required>
-    
+
             <label for="email">Email:</label>
             <input type="email" id="_replyto" name="_replyto" placeholder="JohnDoe@testmail.com" required>
-    
+
             <label for="message">Message:</label>
             <textarea id="message" name="message" placeholder="Hej!" required></textarea>
-    
+
             <input type="submit" value="Send">
         </form>
     </section>
-
     <footer>
         <p>Socials</p>
         <div class="social-links">
             <a href="https://www.facebook.com/nicklashoej/" target="_blank"><i class="fab fa-facebook-square"></i></a>
             <a href="https://www.instagram.com/nicklashoejj/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/kw0nkshehe" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/nicklas-h%C3%B8j-nielsen/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/nicklas-h%C3%B8j-nielsen/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
         </div>
         <p>Copyright © Nicklas Høj Nielsen</p>
     </footer>
@@ -288,8 +295,33 @@
                 tooltip.classList.remove('visible');
             });
         });
+        // Get the modal
+        var modal = document.getElementById("loginModal");
 
+        // Get the button that opens the modal
+        var btn = document.getElementById("loginButton");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
+
 </body>
 
 </html>

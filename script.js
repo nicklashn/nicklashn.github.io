@@ -113,3 +113,52 @@ if (localStorage.getItem('lang') === 'DK') {
     });
     languageSwitch.checked = false;
 }
+
+function openCase(caseNumber) {
+    // Hide all cases
+    var cases = document.getElementsByClassName('case');
+    for (var i = 0; i < cases.length; i++) {
+        cases[i].style.display = 'none';
+    }
+
+    // Show the selected case
+    document.getElementById('expandedCase' + caseNumber).style.display = 'block';
+}
+
+function closeCase(caseNumber) {
+    // Hide the selected case
+    document.getElementById('expandedCase' + caseNumber).style.display = 'none';
+
+    // Show all cases
+    var cases = document.getElementsByClassName('case');
+    for (var i = 0; i < cases.length; i++) {
+        cases[i].style.display = 'block';
+    }
+}
+
+var currentOpenCase = null;
+
+function openCase(caseNumber) {
+    // Close the currently open case if one is open
+    if (currentOpenCase != null) {
+        closeCase(currentOpenCase);
+    }
+
+    document.getElementById('case' + caseNumber).classList.remove('dim'); // restore the chosen case
+    for(let i = 1; i <= 4; i++){
+        if(i != caseNumber){
+            document.getElementById('case' + i).classList.add('dim'); // dim the other cases
+        }
+    }
+    document.getElementById('expandedCase' + caseNumber).style.display = 'block'; // show the expanded case
+    currentOpenCase = caseNumber; // update the currently open case
+}
+
+function closeCase(caseNumber) {
+    for(let i = 1; i <= 4; i++){
+        document.getElementById('case' + i).classList.remove('dim'); // restore all cases
+    }
+    document.getElementById('expandedCase' + caseNumber).style.display = 'none'; // hide the expanded case
+    currentOpenCase = null; // update the currently open case
+}
+
